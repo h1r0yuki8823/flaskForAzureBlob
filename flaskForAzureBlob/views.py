@@ -3,4 +3,4 @@ from flaskForAzureBlob import app
 
 @app.route('/')
 def show_upload():
-    return "Hello Azure"
+    return render_template('upload.html')
