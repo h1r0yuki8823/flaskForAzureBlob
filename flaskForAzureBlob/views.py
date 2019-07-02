@@ -25,7 +25,7 @@ def show_upload():
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
-    file_path = request
+    file_path = request.files.getlist('pdf_file')
     print(file_path)
     block_blob_service = BlockBlobService(account_name=account_name,account_key=account_key)
     block_blob_service.create_blob_from_path(
